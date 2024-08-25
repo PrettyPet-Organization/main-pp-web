@@ -1,0 +1,17 @@
+# Этот файл будет собирать проект.
+version: "3.5"
+
+services:
+  # Это лишь часть настроек, взятых чисто для примера отсюда: https://github.com/yubazh/kafka-compose
+  kafka:
+    container_name: kafka
+    image: docker.io/bitnami/kafka:3.7
+
+  backend-python:
+
+  backend-go:
+
+  frontend:
+
+  gateway:
+    image: nginx:latest
