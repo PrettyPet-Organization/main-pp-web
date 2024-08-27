@@ -1,0 +1,21 @@
+# Этот файл будет собирать проект.
+version: "3.5"
+
+services:
+  # Это лишь часть настроек, взятых чисто для примера отсюда: https://github.com/yubazh/kafka-compose
+  kafka:
+    container_name: kafka
+    image: docker.io/bitnami/kafka:3.7
+
+  # Все настройки ниже нужно будет дописывать исходя из требований сервисов + изменить адрес образа в регистре (если придется).
+  backend-python:
+    image: PrettyPetRepo/backend-python:latest
+
+  backend-go:
+    image: PrettyPetRepo/backend-go:latest
+
+  frontend:
+    image: PrettyPetRepo/frontend:latest
+
+  gateway:
+    image: PrettyPetRepo/gateway:latest
